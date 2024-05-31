@@ -1,0 +1,96 @@
+.music-content {
+  /*background-color: #f9f9f9;*/
+  border-radius: 8px;
+  margin-bottom: 20px;
+  padding: 15px;
+  box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
+  background-image: url('static/mtunes/m2.jpg');
+  background-position: center;
+  background-repeat: no-repeat;
+  background-size: cover;
+}
+
+.play-list {
+  background-color: #3498db;
+  color: #fff;
+  border: none;
+  padding: 10px 15px;
+  border-radius: 4px;
+  cursor: pointer;
+}
+
+.music-content-box {
+  display: flex;
+  align-items: center;
+  margin-top: 15px;
+}
+
+.thumbnail-song {
+  width: 80px;
+  height: 80px;
+  overflow: hidden;
+  border-radius: 4px;
+}
+
+.thumbnail-song img {
+
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+}
+
+.content-wrapper {
+  margin-left: 15px;
+}
+
+.info-song {
+  line-height: 1.5;
+}
+
+.bar-song {
+  display: flex;
+  align-items: center;
+  margin-top: 15px;
+}
+
+.current-time,
+.duration-time {
+  margin: 0 10px;
+}
+
+.progress {
+  flex: 1;
+  height: 8px;
+  background-color: #b2bdbd;
+  position: relative;
+}
+
+.progress-bar {
+  height: 100%;
+  background-color: #2d2d39;
+  width: 50%; /* Adjust based on the initial progress */
+  border-radius: 4px;
+}
+
+.song-footer {
+  margin-top: 15px;
+  display: flex;
+  justify-content: space-around;
+}
+
+.back,
+.play-song,
+.forward {
+  /*background-color: #3498db;*/
+  /*color: #fff;*/
+  border: none;
+  padding: 10px;
+  border-radius: 50%;
+  cursor: pointer;
+}
+
+.back:hover,
+.play-song:hover,
+.forward:hover {
+  /*background-color: #2980b9;*/
+}

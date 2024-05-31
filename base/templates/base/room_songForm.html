@@ -1,0 +1,9 @@
+<form action=""method="post"enctype="multipart/form-data">
+
+     {% csrf_token %}
+     {{ room_form.as_p }}
+
+  {{ song_form.songs.label_tag }}
+  {{ song_form.songs }}
+    <button type="submit">Submit</button>
+</form>

@@ -1,0 +1,48 @@
+{% load static %}
+
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Your Page Title</title>
+
+    <!-- Include your stylesheet here -->
+    <link rel="stylesheet" href="{% static 'styles/style1.css' %}">
+</head>
+<body>
+
+{#{% for s in rooms %}#}
+<div class="music-content" style=" background-image: url('static/mtunes/m2.jpg'); background-size: cover; background-position: center;">
+      <button class="play-list">Playlist <i class="fas fa-list"></i></button>
+      <section class="music-content-box">
+        <div class="thumbnail-song"><img src="{{ room.songs.avatar.url }}" alt="" /></div>
+        <div class="content-wrapper">
+          <div class="info-song">
+            <p class="song-name">{{room.songs.title }}</p>
+            <p class="author">{{ room.songs.artist }}</p>
+          </div>
+        </div>
+      </section>
+            <audio id="audio{{ room.songs.id }}" src="{{ room.songs.file.url }}"></audio>
+      <div class="bar-song" id="{{ room.songs.id }}">
+        <span class="current-time">00:00</span>
+        <div class="progress"><div class="progress-bar"></div></div>
+        <span class="duration-time">03:22</span>
+      </div>
+      <div class="song-footer">
+{#        <button class="back"><i class="fas fa-step-backward"></i></button>#}
+        <button class="play-song">
+            <i class="fas fa-play"></i>
+            <svg xmlns="http://www.w3.org/2000/svg" height="16" width="12" viewBox="0 0 384 512"><!--!Font Awesome Free 6.5.1 by @fontawesome - https://fontawesome.com License - https://fontawesome.com/license/free Copyright 2023 Fonticons, Inc.--><path d="M73 39c-14.8-9.1-33.4-9.4-48.5-.9S0 62.6 0 80V432c0 17.4 9.4 33.4 24.5 41.9s33.7 8.1 48.5-.9L361 297c14.3-8.7 23-24.2 23-41s-8.7-32.2-23-41L73 39z"/></svg>    </svg>
+
+        </button>
+{#        <button class="forward"><i class="fas fa-step-forward"></i></button>#}
+      </div>
+   </div>
+
+       <script src="{% static 'js/script1.js' %}"></script>
+{#{% endfor %}#}
+
+</body>
+</html>

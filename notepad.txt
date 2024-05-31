@@ -1,0 +1,4 @@
+xử lí model Song lại , vẽ mô hình models song lien kết với room và user
+tạo component music show ra màn hình
+xử lí room topics
+xử lí tất cả topics chuyển đổi thành song
